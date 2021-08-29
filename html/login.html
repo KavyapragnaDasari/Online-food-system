@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Validated Login Form</title>
+	
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+	<style>
+		*{
+     padding: 0;
+     margin: 6px;
+ }
+ body{
+     background: url(../images/loginbackground.jpg) no-repeat;
+     background-size: cover;
+     height: 100vh;
+	-webkit-background-size: cover;
+	background-size: cover;
+	background-position: center center;
+	position: relative;
+	 top:0;
+     font-family: sans-serif;
+ }
+
+ .container{
+    
+     margin-top: 100px;
+     width: 460px;
+     height: auto;
+     background: lightgrey;
+     border-radius: 8px;
+ }
+ 
+ .label{
+     padding: 20px 130px;
+     font-size: 28px;
+     font-weight: bold;
+     color: #0d3302;
+     text-align: center;
+     font-weight: bold;
+ }
+ .login_form{
+     padding: 25px 30px;
+ }
+ .login_form .font{
+     font-size: 18px;
+     color: #130f40;
+     margin: 5px 0;
+ }
+ .login_form input{
+     height: 40px;
+     width: 350px;
+     padding: 0 5px;
+     font-size: 18px;
+     outline: none;
+     border: 1px solid silver;
+ }
+ .login_form .font2{
+     margin-top: 30px;
+ }
+ .login_form button{
+     margin: 45px 0 30px 0;
+     height: 45px;
+     width: 350px;
+     font-size: 20px;
+     color: white;
+     outline: none;
+     cursor: pointer;
+     font-weight: bold;
+     background: #1A237E;
+     border-radius: 30px;
+     border: 1px solid #45c2d3;
+     transition: .5s;
+ }
+ .login_form button:hover{
+     background: #3552d1;
+ }
+ .login_form #email_error,
+ .login_form #pass_error{
+     margin-top: 5px;
+     width: 345px;
+     font-size: 18px;
+     color: #c628c6;
+     background: rgba(255,0,0,0.1);
+     text-align: center;
+     padding: 5px 8px;
+     border-radius: 3px;
+     border: 1px solid #EF9A9A;
+     display: none;
+ }
+
+	</style>
+</head>
+<body>
+	<div align="right">
+       
+		<a href="./home.html" class="btn btn-info"><strong>Home</strong></a>
+		<a href="./index.html" class="btn btn-info"><strong>Aboutus</strong></a>
+	   <a href="./contactus.html" class="btn btn-info"><strong>contactus</strong></a>
+		<a href="./register.html" class="btn btn-info"><strong>Registration</strong></a>
+	   <a href="./login.html" class="btn btn-info"><strong>Signin</strong></a>
+	   
+	  </div> 
+	
+		
+			<div class="container">
+		<h1 class="label">LOGIN</h1>
+		<form class="login_form" action="loginaction.html" method="post" name="form" onsubmit="return validated()">
+			<div class="font">Email or Phone</div>
+			<input autocomplete="off" type="text" name="email">
+			<div id="email_error">Please fill up your Email or Phone</div>
+			<div class="font font2">Password</div>
+			<input type="password" name="password">
+			<div id="pass_error">Please fill up your Password</div>
+			<button type="submit">Login</button>
+		</form>
+	</div>	
+	<script src="../css/js/valid.js"></script>
+</body>
+</html>

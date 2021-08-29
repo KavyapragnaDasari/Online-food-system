@@ -1,0 +1,168 @@
+<html>
+<head>
+<title>Document</title>
+
+
+ <script src="../css/js/regis.js"></script>
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> 
+  <style>
+    *{
+    margin: 8px;
+    padding: 0;
+}
+#header /* this name is called inside html file using id*/
+{
+	background:#43D1AF;
+	width:98%;
+	height: 58px;
+	color:#fff;
+	font-size:36px;
+    border-radius: 20px;
+}
+body{
+    background-image: url(../images/foodmain.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-size: 100% 100%;
+}
+
+/*For styling a form*/
+.form-style{   /* this name is called inside html file using class="form-style"*/
+	font-family: 'Open Sans Condensed', arial, sans;
+	width: 500px;
+	padding: 30px;
+    border-radius: 20px;
+	background: #FFFFFF;
+	margin: 50px auto;
+	box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
+	-moz-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
+	-webkit-box-shadow:  0px 0px 15px rgba(0, 0, 0, 0.22);
+
+}
+
+/*For styling a form heading*/
+.form-style h2{ /* this name is called inside html file using <h2>*/
+	background: #43D1AF;
+	font-family: 'Open Sans Condensed', sans-serif;
+	color: #FFFFFF;
+	font-size: 18px;
+	font-weight: 100;
+	padding: 20px;
+	margin: -30px -30px 30px -30px;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+}
+
+/* For styling a textarea-field*/
+.form-style .textarea-field{ /* this name is called inside html file using class="textarea-field"*/
+	height:100px;
+	width: 230px;
+	border-radius: 5px;
+}
+
+ .input-group{
+ margin: 10px 0px 10px 0px;
+ }
+ 
+/* For styling an input text field*/
+ .input-group input{ /* this name is called inside html file using class="input-group"*/
+ height:30px;
+ width: 93%;
+ padding: 5px 10px;
+ font-size:16px;
+  border-radius: 5px;
+   border: 1px solid gray;
+   }
+   
+   /* For styling a menu field*/
+   .input-group select{ /* this name is called inside html file using class="input-group" but for styling menu field*/
+    width: 95%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+    }
+	
+	/* For styling a button*/
+   .btn{  /* this name is called inside html file using class="btn"*/
+    padding:10px;
+ font-size:15px;
+ color:#FFFFFF;
+ background: #1b9fd3;
+   border-radius: 5px;
+   border: none;
+   }
+
+  </style>
+</head>
+<body>
+  <div align="right">
+       
+    <a href="./home.html" class="btn btn-info"><strong>Home</strong></a>
+    <a href="./index.html" class="btn btn-info"><strong>Aboutus</strong></a>
+     <a href="./contactus.html" class="btn btn-info"><strong>contactus</strong></a>
+    <a href="./register.html" class="btn btn-info"><strong>Registration</strong></a>
+     <a href="./login.html" class="btn btn-info"><strong>Signin</strong></a>
+     
+    </div>
+<div id="header" align="center"> Registration Form</div>
+<div class="form-style">
+  <h2>All Fields are Mandatory</h2>
+<form name="form1" method="post" action="" OnSubmit="return fncValidate();" autocomplete="off">
+  <table align="center" width="400" border="0">
+      <tr>
+        <td width="125"> &nbsp;Firstname</td>
+        <td width="180"><div class="input-group">
+          <input type="text" name="fname" size="20"></div>
+        </td>
+      </tr> 
+	  <tr>
+        <td width="125"> &nbsp;Lastname</td>
+        <td width="180"><div class="input-group">
+          <input type="text" name="lname" size="20"></div>
+        </td>
+      </tr>
+	  <tr><td>Gender:</td><td><span id="gen"><input type="radio" name="gender" value="male" id="male"> Male
+	  <input type="radio" name="gender" value="female" id="female"> Female</span></td></tr>
+	  <tr><td>Address:</td><td><textarea name="address" class="textarea-field"></textarea></td></tr>
+	  <tr><td>Country: </td><td><div class="input-group">
+<select id="country">
+<option value="">Choose a country</option>
+<option value="aus">Australia</option>
+<option value="gb">Great Britain</option>
+<option value="ind">India</option>
+</select>
+</div></td></tr>
+<tr>
+        <td> &nbsp;Mobile No:</td> 
+        <td><div  class="input-group"><input type="text" name="phone"></div>
+        </td> 
+      </tr>
+	  <tr>
+        <td> &nbsp;Email</td>
+        <td><div  class="input-group"><input type="text" name="email"></div>
+        </td>
+      </tr>
+	   <tr>
+        <td> &nbsp;Password</td>
+        <td><div  class="input-group"><input type="password" name="Password"></div>
+        </td>
+      </tr>
+      <tr>
+        <td> &nbsp;Confirm Password</td>
+        <td><div  class="input-group"><input type="password"  name="ConPassword"></div>
+        </td>
+      </tr>
+<tr><td></td><td><input type="submit" name="Submit" value="Submit" class="btn">&nbsp&nbsp
+<input type="reset" name="reset" value="Reset" class="btn"></td></tr>
+  </table>
+</form>
+</div>
+</body>
+</html>
